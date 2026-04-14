@@ -8,4 +8,4 @@ A small website to teach English phonetics with:
 
 ## Run locally
 
-Open `/home/runner/work/learn-phonetics/learn-phonetics/index.html` in a browser.
+Open `index.html` in a browser.
