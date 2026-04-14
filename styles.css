@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #10233a;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+header {
+  margin-bottom: 1.25rem;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #dbe4ef;
+  padding: 0.55rem;
+  vertical-align: top;
+}
+
+th {
+  background: #eef4fb;
+  text-align: left;
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+button[data-speak] {
+  border: 1px solid #2369c7;
+  border-radius: 4px;
+  background: #fff;
+  color: #0b4ba2;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 2.5rem;
+}
+
+button[data-speak]:hover {
+  background: #edf4ff;
+}
