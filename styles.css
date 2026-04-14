@@ -68,3 +68,8 @@ button[data-speak] {
 button[data-speak]:hover {
   background: #edf4ff;
 }
+
+button[data-speak]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

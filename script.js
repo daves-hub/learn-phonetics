@@ -6,8 +6,16 @@
 
   const canSpeak = typeof window.speechSynthesis !== "undefined";
 
+  if (!canSpeak) {
+    buttons.forEach((button) => {
+      button.disabled = true;
+      button.title = "Speech playback is not supported in this browser";
+    });
+    return;
+  }
+
   const speak = (text) => {
-    if (!canSpeak || !text) {
+    if (!text) {
       return;
     }
     const utterance = new SpeechSynthesisUtterance(text);
