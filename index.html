@@ -3,153 +3,957 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn English Phonetics</title>
+    <title>English Phonetics – Learn to Pronounce Every Sound</title>
+    <meta
+      name="description"
+      content="A complete interactive guide to English phonetics. Learn every monophthong, diphthong, and consonant of the IPA with pronunciation playback, spelling patterns, and clear explanatory notes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
     <main class="page">
-      <header>
-        <h1>Learn English Phonetics</h1>
-        <p>
-          Practice monophthongs, diphthongs, and consonants with pronunciation
-          playback and common spelling patterns.
+      <!-- ─── Hero ─────────────────────────────────────────────── -->
+      <header class="hero">
+        <div class="hero-badge">Interactive IPA Reference</div>
+        <h1>English Phonetics</h1>
+        <p class="hero-sub">
+          English has around <strong>44 distinct sounds</strong> – far more than
+          its 26 letters suggest. This guide walks you through every vowel and
+          consonant of the International Phonetic Alphabet (IPA) as used in
+          standard British and American English, with clear notes on how each
+          sound is made and how it is typically spelled.
+        </p>
+        <p class="hero-tip">
+          <span class="tip-icon">💡</span> Press
+          <kbd>▶</kbd> next to any sound to hear it spoken aloud. Use the tabs
+          below to jump between sound categories.
         </p>
       </header>
 
-      <section aria-labelledby="monophthongs-title">
-        <h2 id="monophthongs-title">Monophthongs</h2>
-        <p>Single, steady vowel sounds.</p>
-        <table>
-          <caption>
-            Common monophthongs with examples
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">IPA</th>
-              <th scope="col">Keyword</th>
-              <th scope="col">Pattern notes</th>
-              <th scope="col">Listen</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>/iː/</td>
-              <td>see</td>
-              <td>Often written <strong>ee</strong>, <strong>ea</strong>, <strong>ie</strong>.</td>
-              <td><button type="button" data-speak="see">▶</button></td>
-            </tr>
-            <tr>
-              <td>/ɪ/</td>
-              <td>sit</td>
-              <td>Usually short <strong>i</strong> in closed syllables.</td>
-              <td><button type="button" data-speak="sit">▶</button></td>
-            </tr>
-            <tr>
-              <td>/æ/</td>
-              <td>cat</td>
-              <td>Commonly written <strong>a</strong> before many consonants.</td>
-              <td><button type="button" data-speak="cat">▶</button></td>
-            </tr>
-            <tr>
-              <td>/ʌ/</td>
-              <td>cup</td>
-              <td>Often represented by <strong>u</strong>, sometimes <strong>o</strong> (<em>love</em>).</td>
-              <td><button type="button" data-speak="cup">▶</button></td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- ─── Tab Navigation ────────────────────────────────────── -->
+      <nav class="tabs" role="tablist" aria-label="Sound categories">
+        <button
+          class="tab active"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-mono"
+          id="tab-mono"
+        >
+          <span class="tab-icon">🔵</span>
+          <span>Monophthongs</span>
+          <span class="tab-count">12</span>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-diph"
+          id="tab-diph"
+        >
+          <span class="tab-icon">🟣</span>
+          <span>Diphthongs</span>
+          <span class="tab-count">8</span>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-cons"
+          id="tab-cons"
+        >
+          <span class="tab-icon">🟠</span>
+          <span>Consonants</span>
+          <span class="tab-count">24</span>
+        </button>
+      </nav>
+
+      <!-- ─────────────────────────────────────────────────────────
+           PANEL 1 · MONOPHTHONGS
+      ────────────────────────────────────────────────────────────── -->
+      <section
+        id="panel-mono"
+        class="panel active"
+        role="tabpanel"
+        aria-labelledby="tab-mono"
+      >
+        <div class="panel-intro">
+          <h2>Monophthongs — Pure Vowel Sounds</h2>
+          <p>
+            A <em>monophthong</em> (from Greek <em>monos</em> "single" +
+            <em>phthongos</em> "sound") is a vowel whose quality remains
+            constant throughout its duration. Your tongue and lips hold a
+            steady position from beginning to end, unlike a diphthong where
+            they glide. English has <strong>12 monophthongs</strong> in
+            standard accents, arranged here from the front of the mouth (lips
+            spread) to the back (lips rounded).
+          </p>
+        </div>
+
+        <div class="card-grid" id="mono-grid">
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/iː/</div>
+            <div class="card-keyword">see</div>
+            <div class="card-listen">
+              <button type="button" data-speak="see" aria-label="Play: see">▶</button>
+            </div>
+            <div class="card-body">
+              <p>The highest and most front vowel in English. To produce it, spread your lips into a gentle smile and raise the front of your tongue as high as possible without touching the roof of your mouth. Hold the position steady — the <strong>ː</strong> symbol means it is a long vowel.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>ee</strong> — <em>s<u>ee</u>, f<u>ee</u>t, qu<u>ee</u>n</em></li>
+                <li><strong>ea</strong> — <em>t<u>ea</u>, b<u>ea</u>ch, r<u>ea</u>d</em></li>
+                <li><strong>ie / ei</strong> — <em>fi<u>e</u>ld, rec<u>ei</u>ve</em></li>
+                <li><strong>e-e</strong> — <em>th<u>e</u>m<u>e</u>, th<u>e</u>s<u>e</u></em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ɪ/</div>
+            <div class="card-keyword">sit</div>
+            <div class="card-listen">
+              <button type="button" data-speak="sit" aria-label="Play: sit">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A short, lax vowel produced with the tongue slightly lower and less far forward than /iː/. The lips are neutral — neither spread nor rounded. It is one of the most frequent vowels in English and appears in many unstressed syllables.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>i</strong> in a closed syllable — <em>s<u>i</u>t, b<u>i</u>n, f<u>i</u>sh</em></li>
+                <li><strong>y</strong> — <em>g<u>y</u>m, m<u>y</u>th, cr<u>y</u>stal</em></li>
+                <li><strong>ui</strong> — <em>b<u>ui</u>ld, g<u>ui</u>lt</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/e/</div>
+            <div class="card-keyword">bed</div>
+            <div class="card-listen">
+              <button type="button" data-speak="bed" aria-label="Play: bed">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A mid-front, unrounded vowel. The tongue is at mid-height and pushed forward; lips are spread but relaxed. It is short and appears most often before consonants. In some older transcription systems it is written /ɛ/.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>e</strong> in a closed syllable — <em>b<u>e</u>d, m<u>e</u>n, h<u>e</u>lp</em></li>
+                <li><strong>ea</strong> — <em>h<u>ea</u>d, br<u>ea</u>d, m<u>ea</u>nt</em></li>
+                <li><strong>ai / ay</strong> — <em>s<u>ai</u>d, s<u>ay</u>s</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/æ/</div>
+            <div class="card-keyword">cat</div>
+            <div class="card-listen">
+              <button type="button" data-speak="cat" aria-label="Play: cat">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A low front vowel — the front of the tongue dips toward the floor of the mouth while the lips spread wide. It sounds "sharper" or "brighter" than the similar /ɑː/. In American English it is often lengthened before nasal consonants (<em>man, can't</em>).</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>a</strong> before many consonants — <em>c<u>a</u>t, h<u>a</u>nd, b<u>a</u>ck</em></li>
+                <li><strong>au</strong> — rare: <em>l<u>au</u>gh</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ɑː/</div>
+            <div class="card-keyword">car</div>
+            <div class="card-listen">
+              <button type="button" data-speak="car" aria-label="Play: car">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A long, open back vowel. The mouth is wide open, the jaw drops, and the tongue lies low and back. In non-rhotic accents (e.g. most British English) the /r/ after it is silent, leaving a pure long vowel. In American English the /r/ is usually audible.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>ar</strong> — <em>c<u>ar</u>, st<u>ar</u>t, d<u>ar</u>k</em></li>
+                <li><strong>a</strong> before /f s θ/ in British English — <em>b<u>a</u>th, p<u>a</u>ss, p<u>a</u>th</em></li>
+                <li><strong>al</strong> — <em>c<u>al</u>m, p<u>al</u>m, h<u>al</u>f</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ɒ/</div>
+            <div class="card-keyword">lot</div>
+            <div class="card-listen">
+              <button type="button" data-speak="lot" aria-label="Play: lot">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A short, open-back rounded vowel — predominantly a British English sound. The tongue is back and low, and the lips are slightly rounded. In General American English this vowel has merged with /ɑː/, so <em>lot</em> and <em>car</em> use the same vowel quality.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>o</strong> in a closed syllable — <em>l<u>o</u>t, h<u>o</u>t, d<u>o</u>g</em></li>
+                <li><strong>a</strong> — <em>w<u>a</u>nt, w<u>a</u>s, w<u>a</u>tch</em></li>
+                <li><strong>ou</strong> — <em>c<u>ou</u>gh, tr<u>ou</u>gh</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ɔː/</div>
+            <div class="card-keyword">law</div>
+            <div class="card-listen">
+              <button type="button" data-speak="law" aria-label="Play: law">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A long back vowel with noticeable lip rounding. The back of the tongue is raised mid-high. In rhotic accents (American English) this vowel often becomes /ɔːr/ before /r/ as in <em>more</em>, and in many dialects it has merged with /ɑː/ (the "cot-caught merger").</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>aw / aw-e</strong> — <em>l<u>aw</u>, s<u>aw</u>, <u>aw</u>e</em></li>
+                <li><strong>au / augh</strong> — <em>c<u>au</u>se, c<u>augh</u>t, d<u>au</u>ghter</em></li>
+                <li><strong>or</strong> — <em>m<u>or</u>e, sh<u>or</u>e, b<u>or</u>n</em></li>
+                <li><strong>al</strong> — <em>t<u>al</u>l, c<u>al</u>l, w<u>al</u>k</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ʊ/</div>
+            <div class="card-keyword">book</div>
+            <div class="card-listen">
+              <button type="button" data-speak="book" aria-label="Play: book">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A short, lax, back-rounded vowel. The tongue is high and back but not as extreme as for /uː/; the lips are loosely rounded. Often called the "lax u." Learners sometimes confuse it with /uː/ — compare <em>full</em> vs. <em>fool</em>.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>oo</strong> — <em>b<u>oo</u>k, f<u>oo</u>t, c<u>oo</u>k</em></li>
+                <li><strong>u</strong> — <em>p<u>u</u>t, p<u>u</u>sh, f<u>u</u>ll, b<u>u</u>ll</em></li>
+                <li><strong>ou</strong> — <em>c<u>ou</u>ld, w<u>ou</u>ld, sh<u>ou</u>ld</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/uː/</div>
+            <div class="card-keyword">moon</div>
+            <div class="card-listen">
+              <button type="button" data-speak="moon" aria-label="Play: moon">▶</button>
+            </div>
+            <div class="card-body">
+              <p>The highest, most back rounded vowel in English. Lips are firmly rounded and pushed forward; the back of the tongue is raised toward the velum (soft palate). It is long — the twin of /iː/ at the front. In some modern accents it is becoming more central (<em>fronting</em>).</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>oo / oo-e</strong> — <em>m<u>oo</u>n, f<u>oo</u>d, m<u>o</u>v<u>e</u>, h<u>oo</u>v<u>e</u>s</em></li>
+                <li><strong>ew / ue</strong> — <em>n<u>ew</u>, bl<u>ue</u>, tr<u>ue</u></em></li>
+                <li><strong>o-e / ou</strong> — <em>pr<u>o</u>ve, s<u>ou</u>p, thr<u>ou</u>gh</em></li>
+                <li><strong>u-e</strong> — <em>r<u>u</u>le, r<u>u</u>de, J<u>u</u>ne</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ʌ/</div>
+            <div class="card-keyword">cup</div>
+            <div class="card-listen">
+              <button type="button" data-speak="cup" aria-label="Play: cup">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A short central-to-back vowel with no lip rounding. The tongue is in a mid-low position. It is the "default" stressed vowel in many English words and is sometimes called the "stressed schwa." Found only in <em>stressed</em> syllables; compare the unstressed /ə/ below.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>u</strong> — <em>c<u>u</u>p, r<u>u</u>n, f<u>u</u>n</em></li>
+                <li><strong>o</strong> — <em>l<u>o</u>ve, c<u>o</u>me, d<u>o</u>ne, s<u>o</u>n</em></li>
+                <li><strong>ou</strong> — <em>y<u>ou</u>ng, t<u>ou</u>ch, c<u>ou</u>ple</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ɜː/</div>
+            <div class="card-keyword">bird</div>
+            <div class="card-listen">
+              <button type="button" data-speak="bird" aria-label="Play: bird">▶</button>
+            </div>
+            <div class="card-body">
+              <p>A long central vowel — the tongue sits roughly in the middle of the mouth, neither front nor back, and the lips are unrounded. In non-rhotic accents the following /r/ is silent and only the long vowel remains. It is the sound heard in <em>her, sir, fur</em> in British English.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>ir</strong> — <em>b<u>ir</u>d, f<u>ir</u>st, g<u>ir</u>l</em></li>
+                <li><strong>er</strong> — <em>h<u>er</u>, f<u>er</u>n, s<u>er</u>ve</em></li>
+                <li><strong>ur</strong> — <em>f<u>ur</u>, b<u>ur</u>n, t<u>ur</u>n</em></li>
+                <li><strong>or / ear</strong> — <em>w<u>or</u>d, l<u>ear</u>n</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="blue">
+            <div class="card-ipa">/ə/</div>
+            <div class="card-keyword">about</div>
+            <div class="card-listen">
+              <button type="button" data-speak="about" aria-label="Play: about">▶</button>
+            </div>
+            <div class="card-body">
+              <p>The <strong>schwa</strong> — the most common vowel sound in English. It is a mid-central, completely relaxed vowel produced with the tongue at rest and the jaw barely open. It occurs only in <em>unstressed</em> syllables. Almost any vowel letter can reduce to schwa in connected speech. Recognising it is key to natural rhythm.</p>
+              <p class="spelling-label">Common spellings (all unstressed):</p>
+              <ul class="spelling-list">
+                <li><strong>a</strong> — <em><u>a</u>bout, sof<u>a</u></em></li>
+                <li><strong>e</strong> — <em>op<u>e</u>n, list<u>e</u>n</em></li>
+                <li><strong>o</strong> — <em>comp<u>o</u>se, meth<u>o</u>d</em></li>
+                <li><strong>u</strong> — <em>s<u>u</u>pport, circ<u>u</u>s</em></li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- /card-grid -->
       </section>
 
-      <section aria-labelledby="diphthongs-title">
-        <h2 id="diphthongs-title">Diphthongs</h2>
-        <p>Gliding vowel sounds that move from one vowel quality to another.</p>
-        <table>
-          <caption>
-            Common diphthongs with examples
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">IPA</th>
-              <th scope="col">Keyword</th>
-              <th scope="col">Pattern notes</th>
-              <th scope="col">Listen</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>/eɪ/</td>
-              <td>day</td>
-              <td>Often shown by <strong>a-e</strong>, <strong>ay</strong>, <strong>ai</strong>.</td>
-              <td><button type="button" data-speak="day">▶</button></td>
-            </tr>
-            <tr>
-              <td>/aɪ/</td>
-              <td>time</td>
-              <td>Often shown by <strong>i-e</strong>, <strong>igh</strong>, <strong>y</strong>.</td>
-              <td><button type="button" data-speak="time">▶</button></td>
-            </tr>
-            <tr>
-              <td>/oʊ/</td>
-              <td>go</td>
-              <td>Commonly written <strong>o-e</strong>, <strong>oa</strong>, <strong>ow</strong>.</td>
-              <td><button type="button" data-speak="go">▶</button></td>
-            </tr>
-            <tr>
-              <td>/aʊ/</td>
-              <td>house</td>
-              <td>Usually written <strong>ou</strong> or <strong>ow</strong>.</td>
-              <td><button type="button" data-speak="house">▶</button></td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- ─────────────────────────────────────────────────────────
+           PANEL 2 · DIPHTHONGS
+      ────────────────────────────────────────────────────────────── -->
+      <section
+        id="panel-diph"
+        class="panel"
+        role="tabpanel"
+        aria-labelledby="tab-diph"
+      >
+        <div class="panel-intro">
+          <h2>Diphthongs — Gliding Vowel Sounds</h2>
+          <p>
+            A <em>diphthong</em> (from Greek <em>di</em> "two" + <em>phthongos</em>
+            "sound") begins at one vowel position and glides smoothly into another
+            within the same syllable. Think of the movement in <em>boy</em>: your
+            tongue starts open and back, then glides up and forward. English has
+            <strong>8 diphthongs</strong> in standard accents — five "closing"
+            diphthongs (gliding toward /ɪ/ or /ʊ/) and three "centring"
+            diphthongs (gliding toward the schwa /ə/).
+          </p>
+        </div>
+
+        <div class="diph-group-label">Closing Diphthongs — glide toward /ɪ/ or /ʊ/</div>
+        <div class="card-grid" id="diph-grid">
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/eɪ/</div>
+            <div class="card-keyword">day</div>
+            <div class="card-listen">
+              <button type="button" data-speak="day" aria-label="Play: day">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Starts at a mid-front position (like /e/ in <em>bed</em>) and glides upward toward /ɪ/. It is the usual pronunciation of the letter <em>a</em> in an open syllable. Sometimes called the "long a" sound. The first element is strongly stressed; the /ɪ/ glide is brief.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>a-e</strong> — <em>m<u>a</u>k<u>e</u>, g<u>a</u>t<u>e</u>, c<u>a</u>m<u>e</u></em></li>
+                <li><strong>ay</strong> — <em>d<u>ay</u>, pl<u>ay</u>, s<u>ay</u></em></li>
+                <li><strong>ai</strong> — <em>r<u>ai</u>n, w<u>ai</u>t, m<u>ai</u>n</em></li>
+                <li><strong>eigh</strong> — <em><u>eigh</u>t, w<u>eigh</u>t, n<u>eigh</u></em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/aɪ/</div>
+            <div class="card-keyword">time</div>
+            <div class="card-listen">
+              <button type="button" data-speak="time" aria-label="Play: time">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Begins low and open (near /a/) and glides upward and forward toward /ɪ/. The jaw drops wide at the start, then rises as the tongue moves forward. Often called the "long i" sound. It is also the name of the letter <em>I</em> itself.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>i-e</strong> — <em>t<u>i</u>m<u>e</u>, r<u>i</u>d<u>e</u>, f<u>i</u>v<u>e</u></em></li>
+                <li><strong>igh</strong> — <em>n<u>igh</u>t, r<u>igh</u>t, h<u>igh</u></em></li>
+                <li><strong>y / ie</strong> — <em>fl<u>y</u>, b<u>y</u>, p<u>ie</u>, t<u>ie</u></em></li>
+                <li><strong>i</strong> (open syllable) — <em>f<u>i</u>nal, p<u>i</u>lot</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/ɔɪ/</div>
+            <div class="card-keyword">boy</div>
+            <div class="card-listen">
+              <button type="button" data-speak="boy" aria-label="Play: boy">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Starts from a back rounded position (like /ɔː/ in <em>law</em>) and glides to /ɪ/. Lips begin rounded then spread as the tongue moves forward. This diphthong has notably consistent spelling — almost always <em>oi</em> or <em>oy</em> — making it one of the easier ones for learners.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>oi</strong> — <em><u>oi</u>l, c<u>oi</u>n, v<u>oi</u>ce</em></li>
+                <li><strong>oy</strong> — <em>b<u>oy</u>, t<u>oy</u>, enj<u>oy</u></em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/aʊ/</div>
+            <div class="card-keyword">now</div>
+            <div class="card-listen">
+              <button type="button" data-speak="now" aria-label="Play: now">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Begins low and open (near /a/) and glides backward and upward toward /ʊ/ — the tongue moves to the back of the mouth and the lips gradually round. The jaw starts wide open and closes as the diphthong progresses. Also called the "ow" sound.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>ou</strong> — <em>h<u>ou</u>se, <u>ou</u>t, cl<u>ou</u>d</em></li>
+                <li><strong>ow</strong> — <em>n<u>ow</u>, c<u>ow</u>, t<u>ow</u>n</em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/əʊ/</div>
+            <div class="card-keyword">go</div>
+            <div class="card-listen">
+              <button type="button" data-speak="go" aria-label="Play: go">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Begins at a mid-central position (the schwa /ə/) and glides backward and upward toward /ʊ/. In British English this is the "long o" sound. In American English the starting position is often slightly higher — transcribed /oʊ/ — giving a quality closer to pure back-rounded /o/.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>o-e</strong> — <em>h<u>o</u>m<u>e</u>, st<u>o</u>n<u>e</u>, b<u>o</u>n<u>e</u></em></li>
+                <li><strong>oa</strong> — <em>r<u>oa</u>d, b<u>oa</u>t, c<u>oa</u>t</em></li>
+                <li><strong>ow</strong> — <em>sh<u>ow</u>, kn<u>ow</u>, bl<u>ow</u></em></li>
+                <li><strong>o</strong> (open syllable) — <em>g<u>o</u>, n<u>o</u>, s<u>o</u></em></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="diph-group-label" style="margin-top:2rem;">Centring Diphthongs — glide toward /ə/ (mainly British English)</div>
+        <div class="card-grid">
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/ɪə/</div>
+            <div class="card-keyword">here</div>
+            <div class="card-listen">
+              <button type="button" data-speak="here" aria-label="Play: here">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Starts at the high front position /ɪ/ and glides to the central /ə/. In rhotic accents (American English) this is simply /ɪr/ — an /ɪ/ followed by a rhotic (r-coloured) vowel. In non-rhotic accents the /r/ letter is silent and the centring diphthong /ɪə/ remains.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>eer / ere</strong> — <em>b<u>eer</u>, h<u>ere</u>, d<u>eer</u></em></li>
+                <li><strong>ear</strong> — <em><u>ear</u>, f<u>ear</u>, h<u>ear</u></em></li>
+                <li><strong>ier / ia</strong> — <em>p<u>ier</u>, id<u>ea</u></em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/eə/</div>
+            <div class="card-keyword">hair</div>
+            <div class="card-listen">
+              <button type="button" data-speak="hair" aria-label="Play: hair">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Starts at mid-front /e/ and glides to the central /ə/. In rhotic accents it becomes /er/. It is the vowel in <em>square</em> and <em>bear</em> — words where British English traditionally uses a diphthong but American English often uses the monophthong /er/.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>air / are</strong> — <em>h<u>air</u>, f<u>air</u>, c<u>are</u>, b<u>are</u></em></li>
+                <li><strong>ear / ere</strong> — <em>b<u>ear</u>, w<u>ear</u>, th<u>ere</u></em></li>
+                <li><strong>eir</strong> — <em>th<u>eir</u></em></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sound-card" data-color="purple">
+            <div class="card-ipa">/ʊə/</div>
+            <div class="card-keyword">cure</div>
+            <div class="card-listen">
+              <button type="button" data-speak="cure" aria-label="Play: cure">▶</button>
+            </div>
+            <div class="card-body">
+              <p>Starts at the high back rounded position /ʊ/ and glides to the central /ə/. In contemporary British English many speakers are replacing this diphthong with the monophthong /ɔː/ — so <em>cure</em> sounds like <em>caw</em>. It is the rarest of the centring diphthongs and becoming less common.</p>
+              <p class="spelling-label">Common spellings:</p>
+              <ul class="spelling-list">
+                <li><strong>ure</strong> — <em>c<u>ure</u>, p<u>ure</u>, s<u>ure</u></em></li>
+                <li><strong>oor / our</strong> — <em>p<u>oor</u>, t<u>our</u>, m<u>oor</u></em></li>
+                <li><strong>ua</strong> — <em>pl<u>u</u>ral</em></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
       </section>
 
-      <section aria-labelledby="consonants-title">
-        <h2 id="consonants-title">Consonants</h2>
-        <p>
-          Consonants are grouped by voicing and place/manner of articulation.
-        </p>
-        <table>
-          <caption>
-            Consonant examples and spelling patterns
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">IPA</th>
-              <th scope="col">Keyword</th>
-              <th scope="col">Pattern notes</th>
-              <th scope="col">Listen</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>/θ/</td>
-              <td>think</td>
-              <td>Usually spelled <strong>th</strong> (voiceless).</td>
-              <td><button type="button" data-speak="think">▶</button></td>
-            </tr>
-            <tr>
-              <td>/ð/</td>
-              <td>this</td>
-              <td>Also spelled <strong>th</strong> (voiced), especially function words.</td>
-              <td><button type="button" data-speak="this">▶</button></td>
-            </tr>
-            <tr>
-              <td>/ʃ/</td>
-              <td>ship</td>
-              <td>Often represented by <strong>sh</strong>, <strong>ti</strong> (<em>nation</em>).</td>
-              <td><button type="button" data-speak="ship">▶</button></td>
-            </tr>
-            <tr>
-              <td>/tʃ/</td>
-              <td>chair</td>
-              <td>Often spelled <strong>ch</strong>, sometimes <strong>tch</strong>.</td>
-              <td><button type="button" data-speak="chair">▶</button></td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- ─────────────────────────────────────────────────────────
+           PANEL 3 · CONSONANTS
+      ────────────────────────────────────────────────────────────── -->
+      <section
+        id="panel-cons"
+        class="panel"
+        role="tabpanel"
+        aria-labelledby="tab-cons"
+      >
+        <div class="panel-intro">
+          <h2>Consonants — 24 Sounds</h2>
+          <p>
+            A consonant is produced by partly or fully obstructing the airflow.
+            Each consonant is described by three features:
+            <strong>voicing</strong> (do the vocal cords vibrate?),
+            <strong>place</strong> (where in the mouth is the obstruction?), and
+            <strong>manner</strong> (how is the airflow restricted — stopped, forced
+            through a narrow gap, etc.). English consonants are arranged below in
+            pairs where possible, with the <em>voiceless</em> sound listed before
+            its <em>voiced</em> partner.
+          </p>
+        </div>
+
+        <div class="cons-group">
+          <h3 class="group-title">Plosives (Stops) — airflow is fully blocked, then released</h3>
+          <p class="group-note">In plosives, the airstream is completely stopped at some point in the vocal tract, then suddenly released. English plosives come in voiceless / voiced pairs.</p>
+          <div class="card-grid">
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/p/</div>
+              <div class="card-keyword">pen</div>
+              <div class="card-listen">
+                <button type="button" data-speak="pen" aria-label="Play: pen">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless bilabial plosive.</strong> Both lips press together to stop air completely. The throat buzzes for the voiced /b/ but stays silent for /p/. At the start of a stressed syllable in English, /p/ is aspirated — a small puff of air follows the release (hold your hand in front of your mouth!).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>p</strong> — <em><u>p</u>en, ca<u>p</u>, ha<u>pp</u>y</em></li>
+                  <li><strong>pp</strong> — <em>su<u>pp</u>er, sto<u>pp</u>ed</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/b/</div>
+              <div class="card-keyword">bed</div>
+              <div class="card-listen">
+                <button type="button" data-speak="bad" aria-label="Play: bad">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced bilabial plosive.</strong> Same lip closure as /p/, but the vocal cords vibrate throughout. At the end of a word, /b/ may have its voicing reduced (making it sound similar to /p/) — this is called <em>final obstruent devoicing</em> in many languages but is only partial in English.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>b</strong> — <em><u>b</u>ed, la<u>b</u>, a<u>b</u>out</em></li>
+                  <li><strong>bb</strong> — <em>ru<u>bb</u>er, ra<u>bb</u>it</em></li>
+                  <li><em>Note: silent before</em> <strong>t</strong> — <em>dou<u>b</u>t, de<u>b</u>t, su<u>b</u>tle</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/t/</div>
+              <div class="card-keyword">top</div>
+              <div class="card-listen">
+                <button type="button" data-speak="top" aria-label="Play: top">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless alveolar plosive.</strong> The tongue tip touches the <em>alveolar ridge</em> (the bony ledge just behind the upper teeth), stopping air briefly before a sudden release. In American English, a /t/ between vowels is often "flapped" — pronounced more like a quick /d/ (<em>butter, letter, water</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>t / tt</strong> — <em><u>t</u>op, bu<u>tt</u>on, ki<u>tt</u>en</em></li>
+                  <li><strong>ed</strong> (past tense after voiceless sounds) — <em>walk<u>ed</u>, stop<u>ped</u></em></li>
+                  <li><em>Silent in</em> — <em>cas<u>t</u>le, lis<u>t</u>en, fas<u>t</u>en</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/d/</div>
+              <div class="card-keyword">dog</div>
+              <div class="card-listen">
+                <button type="button" data-speak="dog" aria-label="Play: dog">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced alveolar plosive.</strong> Identical placement to /t/ — tongue tip on the alveolar ridge — but with vocal cord vibration. In informal American English, /d/ between vowels can also be flapped, making <em>ladder</em> and <em>latter</em> sound nearly identical.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>d / dd</strong> — <em><u>d</u>og, sa<u>dd</u>le, a<u>dd</u></em></li>
+                  <li><strong>ed</strong> (past tense after voiced sounds) — <em>call<u>ed</u>, play<u>ed</u></em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/k/</div>
+              <div class="card-keyword">cat</div>
+              <div class="card-listen">
+                <button type="button" data-speak="cat" aria-label="Play: cat">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless velar plosive.</strong> The back of the tongue presses against the <em>velum</em> (soft palate) at the rear of the mouth. Like /p/ and /t/, it is aspirated at the beginning of stressed syllables. Notice how the contact point shifts slightly depending on the following vowel (<em>key</em> vs. <em>cool</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>c</strong> (before a, o, u, r, l) — <em><u>c</u>at, <u>c</u>old, <u>c</u>up</em></li>
+                  <li><strong>k</strong> — <em><u>k</u>ing, ma<u>k</u>e, wee<u>k</u></em></li>
+                  <li><strong>ck</strong> — <em>ba<u>ck</u>, clo<u>ck</u>, du<u>ck</u></em></li>
+                  <li><strong>ch</strong> — <em><u>ch</u>aos, s<u>ch</u>ool, e<u>ch</u>o</em></li>
+                  <li><strong>qu</strong> — <em><u>qu</u>ite, <u>qu</u>een</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/ɡ/</div>
+              <div class="card-keyword">get</div>
+              <div class="card-listen">
+                <button type="button" data-speak="get" aria-label="Play: get">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced velar plosive.</strong> Identical back-of-tongue placement to /k/, but with vibrating vocal cords. A common learner difficulty is the difference between the <em>hard g</em> (/ɡ/ in <em>get</em>) and <em>soft g</em> (/dʒ/ in <em>gem</em>), which depends largely on the following vowel letter.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>g</strong> (before a, o, u) — <em><u>g</u>et, <u>g</u>o, <u>g</u>un</em></li>
+                  <li><strong>gg</strong> — <em>e<u>gg</u>, bi<u>gg</u>er</em></li>
+                  <li><strong>gh</strong> — <em><u>gh</u>ost, <u>gh</u>oul</em></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="cons-group">
+          <h3 class="group-title">Fricatives — air forced through a narrow gap, creating friction</h3>
+          <p class="group-note">In fricatives, air is forced through a constricted passage, creating a hissing or buzzing sound. English has 9 fricatives — the largest category.</p>
+          <div class="card-grid">
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/f/</div>
+              <div class="card-keyword">fish</div>
+              <div class="card-listen">
+                <button type="button" data-speak="fish" aria-label="Play: fish">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless labiodental fricative.</strong> The upper front teeth touch or nearly touch the inner lower lip, and air is squeezed between them. This creates a steady, hushing friction — without any vocal cord buzz.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>f / ff</strong> — <em><u>f</u>ish, o<u>ff</u>, co<u>ff</u>ee</em></li>
+                  <li><strong>ph</strong> — <em><u>ph</u>one, <u>ph</u>oto, gra<u>ph</u></em></li>
+                  <li><strong>gh</strong> (after round vowels) — <em>enou<u>gh</u>, rou<u>gh</u>, lau<u>gh</u></em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/v/</div>
+              <div class="card-keyword">van</div>
+              <div class="card-listen">
+                <button type="button" data-speak="van" aria-label="Play: van">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced labiodental fricative.</strong> Exactly like /f/ in placement, but with the vocal cords buzzing. Place your fingers on your throat — you should feel vibration for /v/ but not /f/. The pair /f/–/v/ is one of the most useful voicing contrasts in English (<em>fine/vine, safe/save</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>v</strong> — <em><u>v</u>an, lo<u>v</u>e, o<u>v</u>er</em></li>
+                  <li><strong>f</strong> — <em>o<u>f</u></em> (the only common exception)</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/θ/</div>
+              <div class="card-keyword">think</div>
+              <div class="card-listen">
+                <button type="button" data-speak="think" aria-label="Play: think">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless dental fricative.</strong> The tongue tip is placed between or just behind the upper and lower front teeth, and air streams through to create a soft friction. This sound is rare across the world's languages, and many learners substitute /s/, /t/, or /f/. The key: keep the tongue visible between the teeth briefly.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>th</strong> — <em><u>th</u>ink, <u>th</u>ank, heal<u>th</u>, mon<u>th</u>, tee<u>th</u></em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/ð/</div>
+              <div class="card-keyword">this</div>
+              <div class="card-listen">
+                <button type="button" data-speak="this" aria-label="Play: this">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced dental fricative.</strong> Identical tongue position to /θ/ but with vocal cord vibration added. In English, the voiced /ð/ appears mostly in grammatical (function) words — <em>the, this, that, they, them, there, though</em>. Content words (nouns, verbs, adjectives) tend to use voiceless /θ/ instead.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>th</strong> — <em><u>th</u>is, <u>th</u>e, mo<u>th</u>er, brea<u>th</u>e, ba<u>th</u>e</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/s/</div>
+              <div class="card-keyword">sun</div>
+              <div class="card-listen">
+                <button type="button" data-speak="sun" aria-label="Play: sun">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless alveolar fricative.</strong> The tongue tip approaches (but does not touch) the alveolar ridge, and air streams in a sharp hiss through the narrow channel. It is one of the most frequent consonants in English and is also used for plural endings and third-person singular verb forms.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>s / ss</strong> — <em><u>s</u>un, gla<u>ss</u>, mi<u>ss</u></em></li>
+                  <li><strong>c</strong> (before e, i, y) — <em><u>c</u>ircle, <u>c</u>ity, <u>c</u>ycle</em></li>
+                  <li><strong>sc</strong> — <em><u>sc</u>ience, <u>sc</u>ene</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/z/</div>
+              <div class="card-keyword">zoo</div>
+              <div class="card-listen">
+                <button type="button" data-speak="zoo" aria-label="Play: zoo">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced alveolar fricative.</strong> The voiced counterpart of /s/. In spoken English, plural and possessive endings spelled <em>-s</em> are often pronounced /z/ after voiced sounds (<em>dogs, beds, cars</em>). The buzzing quality is the distinguishing cue — compare <em>sip</em> vs. <em>zip</em>.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>z / zz</strong> — <em><u>z</u>oo, bu<u>zz</u>, ja<u>zz</u></em></li>
+                  <li><strong>s</strong> (between vowels or after voiced consonant) — <em>no<u>s</u>e, i<u>s</u>, dog<u>s</u></em></li>
+                  <li><strong>x</strong> — <em><u>x</u>ylophone, e<u>x</u>ample</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/ʃ/</div>
+              <div class="card-keyword">ship</div>
+              <div class="card-listen">
+                <button type="button" data-speak="ship" aria-label="Play: ship">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless palato-alveolar fricative.</strong> The tongue blade (just behind the tip) approaches the area between the alveolar ridge and the hard palate. The lips protrude slightly forward. The result is a hushing, "shushing" sound — softer and lower-pitched than /s/. Think of telling someone to be quiet: "Shhh…"</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>sh</strong> — <em><u>sh</u>ip, wa<u>sh</u>, fre<u>sh</u></em></li>
+                  <li><strong>ti</strong> — <em>na<u>ti</u>on, sta<u>ti</u>on, pa<u>ti</u>ent</em></li>
+                  <li><strong>ssi / si</strong> — <em>mi<u>ssi</u>on, ten<u>si</u>on</em></li>
+                  <li><strong>ch</strong> — <em>ma<u>ch</u>ine, <u>ch</u>ef</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/ʒ/</div>
+              <div class="card-keyword">measure</div>
+              <div class="card-listen">
+                <button type="button" data-speak="measure" aria-label="Play: measure">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced palato-alveolar fricative.</strong> The voiced partner of /ʃ/ — same tongue position, same lip protrusion, but with vocal cord vibration. It is the rarest consonant phoneme in English, appearing mostly in French-origin words. Think of the "zh" sound in the middle of <em>treasure, leisure, vision</em>.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>s / si / su</strong> — <em>mea<u>s</u>ure, vi<u>si</u>on, u<u>su</u>al</em></li>
+                  <li><strong>g</strong> (in French loanwords) — <em><u>g</u>enre, bei<u>g</u>e, rou<u>g</u>e</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/h/</div>
+              <div class="card-keyword">hat</div>
+              <div class="card-listen">
+                <button type="button" data-speak="hat" aria-label="Play: hat">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless glottal fricative.</strong> Unlike all other fricatives, /h/ has no fixed place of articulation in the mouth — the friction is created at the <em>glottis</em> (the space between the vocal cords) as air rushes through them. The surrounding vowel shapes the mouth position. It only appears before vowels; the letter <em>h</em> is silent in many common words.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>h</strong> — <em><u>h</u>at, <u>h</u>elp, be<u>h</u>ind</em></li>
+                  <li><em>Silent h</em> — <em><u>h</u>our, <u>h</u>onest, <u>h</u>eir, ve<u>h</u>icle</em></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="cons-group">
+          <h3 class="group-title">Affricates — a plosive followed immediately by a fricative</h3>
+          <p class="group-note">Affricates begin with a complete stop (plosive) and release into friction rather than open air — giving a two-part sound treated as a single phoneme.</p>
+          <div class="card-grid">
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/tʃ/</div>
+              <div class="card-keyword">chair</div>
+              <div class="card-listen">
+                <button type="button" data-speak="chair" aria-label="Play: chair">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiceless palato-alveolar affricate.</strong> The tongue tip and blade form a complete seal against the alveolar ridge, then release slowly through the /ʃ/ friction position — never letting air through cleanly. Think of /t/ melting into /ʃ/ as a single motion. A very satisfying sound when produced clearly.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>ch</strong> — <em><u>ch</u>air, <u>ch</u>ur<u>ch</u>, tea<u>ch</u>er</em></li>
+                  <li><strong>tch</strong> — <em>ca<u>tch</u>, wa<u>tch</u>, fe<u>tch</u></em></li>
+                  <li><strong>t</strong> before ure/ion — <em>na<u>t</u>ure, ques<u>t</u>ion</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/dʒ/</div>
+              <div class="card-keyword">jump</div>
+              <div class="card-listen">
+                <button type="button" data-speak="jump" aria-label="Play: jump">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced palato-alveolar affricate.</strong> The voiced partner of /tʃ/ — /d/ releases into /ʒ/ with vocal cord vibration throughout. This is the sound of the letter <em>j</em> in English, and also the "soft g" before front vowels. Compare <em>chunk</em> /tʃ/ vs. <em>junk</em> /dʒ/.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>j</strong> — <em><u>j</u>ump, <u>j</u>ob, en<u>j</u>oy</em></li>
+                  <li><strong>g</strong> (before e, i, y) — <em><u>g</u>em, <u>g</u>iant, <u>g</u>ym</em></li>
+                  <li><strong>ge / dge</strong> — <em>a<u>ge</u>, ju<u>dge</u>, bri<u>dge</u></em></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="cons-group">
+          <h3 class="group-title">Nasals — air passes through the nose</h3>
+          <p class="group-note">In nasals, the mouth is fully blocked (like a plosive) but the soft palate drops, letting all air escape through the nasal passage instead. All English nasals are voiced.</p>
+          <div class="card-grid">
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/m/</div>
+              <div class="card-keyword">man</div>
+              <div class="card-listen">
+                <button type="button" data-speak="man" aria-label="Play: man">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced bilabial nasal.</strong> Both lips press together (like /p/ and /b/), but instead of blocking all airflow, the velum lowers to route air through the nose. Hum with your lips closed — that is /m/. It can form a syllable on its own in English (<em>rhythm, prism</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>m / mm</strong> — <em><u>m</u>an, ha<u>mm</u>er, la<u>m</u>b</em></li>
+                  <li><em>Silent b after m</em> — <em>la<u>m</u>b, bo<u>m</u>b, thu<u>m</u>b</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/n/</div>
+              <div class="card-keyword">no</div>
+              <div class="card-listen">
+                <button type="button" data-speak="no" aria-label="Play: no">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced alveolar nasal.</strong> Tongue tip seals against the alveolar ridge (like /t/ and /d/), and air flows through the nose. It is one of the most common consonants in English. Before /k/ or /g/ the nasal often assimilates to /ŋ/ (<em>income, congress</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>n / nn</strong> — <em><u>n</u>o, su<u>n</u>, fu<u>nn</u>y</em></li>
+                  <li><strong>kn</strong> (silent k) — <em>k<u>n</u>ow, k<u>n</u>ee, k<u>n</u>ife</em></li>
+                  <li><strong>gn</strong> — <em>si<u>gn</u>, g<u>n</u>aw</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/ŋ/</div>
+              <div class="card-keyword">sing</div>
+              <div class="card-listen">
+                <button type="button" data-speak="sing" aria-label="Play: sing">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced velar nasal.</strong> The back of the tongue presses against the velum (like /k/ and /ɡ/), while air escapes through the nose. It never appears at the beginning of a word in English. A common variation: in <em>-ing</em> suffixes in casual speech, the /ŋ/ may be replaced by /n/ — the well-known "g-dropping" (e.g. <em>runnin'</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>ng</strong> — <em>si<u>ng</u>, lo<u>ng</u>, thi<u>ng</u></em></li>
+                  <li><strong>n</strong> before /k/ — <em>ba<u>n</u>k, thi<u>n</u>k, u<u>n</u>cle</em></li>
+                  <li><strong>nk</strong> — <em>dri<u>nk</u>, pi<u>nk</u>, ta<u>nk</u></em></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="cons-group">
+          <h3 class="group-title">Approximants — articulators approach but don't create friction</h3>
+          <p class="group-note">Approximants are in between vowels and consonants — the passage narrows but not enough to create turbulence. They are always voiced and often called "semi-vowels" or "glides" (for /w/ and /j/).</p>
+          <div class="card-grid">
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/l/</div>
+              <div class="card-keyword">leg</div>
+              <div class="card-listen">
+                <button type="button" data-speak="leg" aria-label="Play: leg">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced alveolar lateral approximant.</strong> The tongue tip touches the alveolar ridge, but the sides of the tongue stay down — air flows around the sides ("lateral" flow). English has two varieties: "clear l" before vowels (<em>let</em>) and "dark l" (with the back of the tongue raised) before consonants and at word-ends (<em>milk, call</em>).</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>l / ll</strong> — <em><u>l</u>eg, ba<u>ll</u>, ye<u>ll</u>ow</em></li>
+                  <li><em>Silent l</em> — <em>ca<u>l</u>m, ta<u>l</u>k, ha<u>l</u>f, fo<u>l</u>k</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/r/</div>
+              <div class="card-keyword">red</div>
+              <div class="card-listen">
+                <button type="button" data-speak="red" aria-label="Play: red">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced alveolar/post-alveolar approximant.</strong> The tongue tip curls slightly upward and back (retroflex) without touching anything. The lips may round slightly. In rhotic accents (most of American English) /r/ is pronounced wherever the letter <em>r</em> appears; in non-rhotic accents (most British English) it is only pronounced before vowels.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>r / rr / wr</strong> — <em><u>r</u>ed, a<u>rr</u>ow, <u>wr</u>ite</em></li>
+                  <li><em>Silent in non-rhotic accents</em> — <em>ca<u>r</u>, bi<u>r</u>d, he<u>r</u>e</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/j/</div>
+              <div class="card-keyword">yet</div>
+              <div class="card-listen">
+                <button type="button" data-speak="yet" aria-label="Play: yet">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced palatal approximant.</strong> The front of the tongue rises toward the hard palate — the same position as /iː/ — and the mouth glides straight into the following vowel. This is why <em>yet</em> begins with a glide from /iː/-position. Often called the "y-glide." It is the same as the German letter <em>j</em> and Spanish <em>y</em>.</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>y</strong> — <em><u>y</u>et, <u>y</u>ear, be<u>y</u>ond</em></li>
+                  <li><strong>u / ew / eu</strong> — <em><u>u</u>se, f<u>ew</u>, f<u>eu</u>d</em> (the /j/ is part of the vowel complex)</li>
+                  <li><strong>i</strong> — <em>on<u>i</u>on, mill<u>i</u>on</em></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="sound-card" data-color="orange">
+              <div class="card-ipa">/w/</div>
+              <div class="card-keyword">wet</div>
+              <div class="card-listen">
+                <button type="button" data-speak="wet" aria-label="Play: wet">▶</button>
+              </div>
+              <div class="card-body">
+                <p><strong>Voiced labio-velar approximant.</strong> Two things happen simultaneously: the back of the tongue rises toward the velum (like /uː/) AND the lips round and protrude. Say /uː/ and then immediately open into the following vowel — that movement is /w/. Sometimes called the "w-glide."</p>
+                <p class="spelling-label">Common spellings:</p>
+                <ul class="spelling-list">
+                  <li><strong>w</strong> — <em><u>w</u>et, a<u>w</u>ay, s<u>w</u>im</em></li>
+                  <li><strong>wh</strong> — <em><u>wh</u>en, <u>wh</u>ere, <u>wh</u>at</em> (many speakers use /w/ here)</li>
+                  <li><em>Silent w</em> — <em><u>w</u>rite, t<u>w</u>o, s<u>w</u>ord, <u>w</u>ho</em></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
       </section>
+
+      <footer class="site-footer">
+        <p>Phoneme inventory based on standard British and American English (RP / GenAm). IPA symbols follow the 2005 chart. Pronunciation playback uses your browser's Web Speech API — quality may vary by device.</p>
+        <p class="footer-credit">Made with <span class="heart">♥</span> by <a href="https://github.com/daves-hub" target="_blank" rel="noopener noreferrer">Genesis</a></p>
+      </footer>
     </main>
+
     <script src="./script.js"></script>
   </body>
 </html>
